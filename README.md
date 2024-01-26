@@ -2,14 +2,14 @@
 這邊是我的CTF空間  
 # 平台
 實驗中學資研社 社團練習平台[NEHS ICED](https://ctf.nicewhite.xyz/)  
-實驗中學資研社 社團比賽平台[ICED CTF](https://ctf.nicewhite.xyz/)[https://ctfd.nicewhite.xyz/]  
+實驗中學資研社 社團比賽平台[ICED CTF][https://ctfd.nicewhite.xyz/]  
 # 題目
 ## 2023 期末社內賽
 一場新手導向的比賽，主要內容為這學期有教的web和crypto  
 ### WEB/PT
 #### MATH LAB
 https://github.com/William957-web/ICED-chal1    
-[https://chal.onrender.com](https://chal1.onrender.com/)    
+[https://chal1.onrender.com](https://chal1.onrender.com/)    
 <details>
 <summary>Solution</summary>
 RECON->weak authentication bypass->command injection  
