@@ -2,7 +2,7 @@
 這邊是我的CTF空間  
 # 平台
 實驗中學資研社 社團練習平台[NEHS ICED](https://ctf.nicewhite.xyz/)  
-實驗中學資研社 社團比賽平台[ICED CTF][https://ctfd.nicewhite.xyz/]  
+實驗中學資研社 社團比賽平台[ICED CTF](https://ctfd.nicewhite.xyz/)  
 # 題目
 ## 2023 期末社內賽
 一場新手導向的比賽，主要內容為這學期有教的web和crypto  
