@@ -7,6 +7,7 @@
 ## 2024 春季社內賽
 一樣是新手導向良心場(?)，包含Web/Crypto/Rev/Pwn/Forensics  
 有個id叫做Yui的拿冠軍但我不知道你是誰:D  
+特別想講一下Hack My X這題web，其實題目是要去打這個twitter帳號：[https://twitter.com/JulianLaup](https://twitter.com/JulianLaup)  
 ### 題目檔案連結  
 [https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp](https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp)  
 ### 題解簡報  
