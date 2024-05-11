@@ -5,7 +5,7 @@
 # 題目
 
 ## 2024 春季社內賽
-一樣是新手導向良心場(?)  
+一樣是新手導向良心場(?)，包含Web/Crypto/Rev/Pwn/Forensics  
 有個id叫做Yui的拿冠軍但我不知道你是誰:D  
 ### 題目檔案連結  
 [https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp](https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp)  
