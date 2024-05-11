@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>長輸入框表單</title>
+<style>
+    /* 基本樣式 */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        margin: 50px auto;
+        width: 80%;
+        max-width: 600px;
+    }
+    .form-group {
+        display: flex;
+    }
+    input[type="text"] {
+        flex: 1; /* 輸入框填滿可用空間 */
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+    }
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<center><h1>Simple web service</h1>
+<br>Enter some stuffs with url encoded, admin will visit it.</br></center>
+<div class="container">
+    <form action="visit" method="post">
+        <div class="form-group">
+            <input type="text" name="content" id="content" placeholder="Whale%20says%2C%20%22Hello%20ocean%21%22" required>
+            <input type="submit" value="送出">
+        </div>
+    </form>
+</div>
+<center>
+<br>How would admin visit it with your url encoded payload?</br>
+<br>Example:<a href="?content=Whale%20says%2C%20%22Hello%20ocean%21%22">Click Me</a></br>
+<br>But %3C & %3E will be replaced, you can try it your self though...</br>
+<br></br>
+<sapn id="Outcome"></sapn>
+</center>
+<script>
+  var getUrlString = location.href;
+  var url = new URL(getUrlString);
+  const Outcome=document.querySelector('#Outcome');
+  Outcome.innerHTML=url.searchParams.get('content');
+</script>
+</body>
+</html>

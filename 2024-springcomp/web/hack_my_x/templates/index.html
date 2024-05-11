@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        .logout-link {
+            float: right;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('login') }}" class="logout-link">Login</a>
+        <h1>Welcome to my blog</h1>
+        <hr>
+        {% for post in posts %}
+            <div class="post">
+                <a href="/post?id={{ post['id'] }}"><h2>{{ post['title'] }}</h2></a>
+                <p>{{ post['content'] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

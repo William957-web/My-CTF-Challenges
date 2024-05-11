@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Looping</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-text {
+  font-size: 48px;
+  color: #3498db;
+  animation: textAnimation 2s infinite alternate;
+}
+
+@keyframes textAnimation {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+</style>
+</head>
+<body>
+
+<div class="big-text">{{msg}}</div>
+
+</body>
+</html>
