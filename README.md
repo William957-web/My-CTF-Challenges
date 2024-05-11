@@ -2,8 +2,16 @@
 這邊是我的CTF空間  
 # 平台
 實驗中學資研社 社團練習平台[NEHS ICED](https://ctf.nicewhite.xyz/)  
-實驗中學資研社 社團比賽平台[ICED CTF](https://ctfd.nicewhite.xyz/)  
 # 題目
+
+## 2024 春季社內賽
+一樣是新手導向良心場(?)  
+有個id叫做Yui的拿冠軍但我不知道你是誰:D  
+### 題目檔案連結  
+[https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp](https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp)  
+### 題解簡報  
+[https://hackmd.io/ACYOHSPERgGrp17AVt5Zig](https://hackmd.io/ACYOHSPERgGrp17AVt5Zig?view#/)
+
 ## 2023 期末社內賽
 一場新手導向的比賽，主要內容為這學期有教的web和crypto  
 ### WEB/PT
