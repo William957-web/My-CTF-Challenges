@@ -4,11 +4,18 @@
 實驗中學資研社 社團練習平台[NEHS ICED](https://ctf.nicewhite.xyz/)  
 # 題目
 
+## 2024 THJCC CTF 臺灣高中聯合資安競賽
+### 工作人員心得
+[https://wha13.github.io/2024/04/30/thjcc-2024/](https://wha13.github.io/2024/04/30/thjcc-2024/)
+### 題解
+[https://hackmd.io/53Ouyr0NSMemWIl3DggMFw](https://hackmd.io/53Ouyr0NSMemWIl3DggMFw)
+### 題目檔案
+[https://github.com/William957-web/My-CTF-Challenges/tree/main/THJCC-2024](https://github.com/William957-web/My-CTF-Challenges/tree/main/THJCC-2024)
 ## 2024 春季社內賽
 一樣是新手導向良心場(?)，包含Web/Crypto/Rev/Pwn/Forensics  
 有個id叫做Yui的拿冠軍但我不知道你是誰:D  
 特別想講一下Hack My X這題web，其實題目是要去打這個twitter帳號：[https://twitter.com/JulianLaup](https://twitter.com/JulianLaup)  
-### 題目檔案連結  
+### 題目檔案  
 [https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp](https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp)  
 ### 題解簡報  
 [https://hackmd.io/ACYOHSPERgGrp17AVt5Zig](https://hackmd.io/ACYOHSPERgGrp17AVt5Zig?view#/)
