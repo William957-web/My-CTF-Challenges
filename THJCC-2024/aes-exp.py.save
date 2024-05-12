@@ -1,0 +1,23 @@
+from pwn import *
+r=remote('0.0.0.0', 29999)
+
+s=r.recvlines(6)
+print(s)
+s=r.recvuntil(b':')
+r.sendline(b'2')
+s=r.recvuntil(b':')
+r.sendline(b'656174696e675f7768616c652e2e2e01')
+sign=r.recvline()[:-1]
+s=r.recvlines(3)
+s=r.recvuntil(b':')
+r.sendline(b'1')
+s=r.recvuntil(b':')
+r.sendline(sign)
+s=r.recvlines(3)
+enc_flag=bytes.fromhex(r.recvline()[:-1].decode())
+s=r.recvuntil(b':')
+r.sendline(b'1')
+s=r.recvuntil(b':')
+r.sendline(b'0'*64)
+leak=bytes.fromhex(r.recvline()[:-1].decode())
+iv=xor(leak[0:16], leak[16:32])

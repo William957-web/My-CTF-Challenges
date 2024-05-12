@@ -1,0 +1,2 @@
+test:test1234
+admin:My_S3cr3t_Passwd
