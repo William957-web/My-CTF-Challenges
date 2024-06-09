@@ -5,10 +5,8 @@ import sqlite3
 app = Flask(__name__)
 app.secret_key = 'Whale_eating_3@ting'
 
-# 数据库配置
 DATABASE = 'blog.db'
 
-# 创建数据库连接
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -16,14 +14,12 @@ def get_db():
         db.row_factory = sqlite3.Row
     return db
 
-# 关闭数据库连接
 @app.teardown_appcontext
 def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
 
-# 创建表格
 def init_db():
     with app.app_context():
         db = get_db()
@@ -31,7 +27,6 @@ def init_db():
             db.cursor().executescript(f.read())
         db.commit()
 
-# 用户登录
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -51,7 +46,6 @@ def login():
             return render_template('login.html', error='Invalid username or password.')
     return render_template('login.html')
 
-# 用户注销
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
@@ -66,7 +60,6 @@ def view_post():
     post = cur.fetchone()
     return render_template('post.html', post=post)
 
-# 首页显示帖子
 @app.route('/')
 def index():
     db = get_db()
