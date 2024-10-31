@@ -4,6 +4,10 @@
 實驗中學資研社 社團練習平台[NEHS ICED](https://ctf.nicewhite.xyz/)  
 # 題目
 
+## 2024 成大資安社迎新盃
+丟了一Crypto一MISC
+### 題目檔案
+[https://github.com/William957-web/My-CTF-Challenges/tree/main/nckuctf-2024](https://github.com/William957-web/My-CTF-Challenges/tree/main/nckuctf-2024)  
 ## 2024 THJCC CTF 臺灣高中聯合資安競賽
 ### 工作人員心得
 [https://wha13.github.io/2024/04/30/thjcc-2024/](https://wha13.github.io/2024/04/30/thjcc-2024/)
