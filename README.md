@@ -8,6 +8,9 @@
 丟了一Crypto一MISC
 ### 題目檔案
 [https://github.com/William957-web/My-CTF-Challenges/tree/main/nckuctf-2024](https://github.com/William957-web/My-CTF-Challenges/tree/main/nckuctf-2024)  
+## No Hack No CTF 2024
+先丟個賽後工人 Write Up 晚點丟檔案 :zzz:  
+[https://wha13.github.io/2024/11/17/nhnc-2024-wp/](https://wha13.github.io/2024/11/17/nhnc-2024-wp/)  
 ## 2024 THJCC CTF 臺灣高中聯合資安競賽
 ### 工作人員心得
 [https://wha13.github.io/2024/04/30/thjcc-2024/](https://wha13.github.io/2024/04/30/thjcc-2024/)
