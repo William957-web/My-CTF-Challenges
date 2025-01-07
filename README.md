@@ -25,7 +25,7 @@
 ### 題目檔案  
 [https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp](https://github.com/William957-web/My-CTF-Challenges/tree/main/2024-springcomp)  
 ### 題解簡報  
-[https://hackmd.io/ACYOHSPERgGrp17AVt5Zig](https://hackmd.io/ACYOHSPERgGrp17AVt5Zig?view#/)
+[https://hackmd.io/@Whale120/S1drvBYlR#/](https://hackmd.io/@Whale120/S1drvBYlR#/)  
 
 ## 2023 期末社內賽
 一場新手導向的比賽，主要內容為這學期有教的web和crypto  
