@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  ctf_ssh:
+    build: .
+    container_name: ctf_ssh
+    ports:
+      - "2222:2222"
+    # Mount your local C file into the build context if you prefer live editing
+    # volumes:
+    #   - ./tiny_encrypt.c:/home/hacker/tiny_encrypt.c:ro
