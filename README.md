@@ -72,7 +72,7 @@ Official wp (Mandarin): [https://hackmd.io/53Ouyr0NSMemWIl3DggMFw](https://hackm
 |Category|Challenge Name|Tags|Difficulty|
 |---|---|---|---|
 |Crypto|Kirby's Secrets|Deffie-Helman,ECC,Pohlig-Hellman|5|
-|Misc|Double Exploit|BOF,CMDI,CRLF|4|
+|Misc|Double Exploit|BOF,CMDI,CRLF,BlackBox|4|
 
 ## NEHS-ICED-CTF
 A plarform originated by me for my school new learners!  
