@@ -1,0 +1,11 @@
+name: "Ramen CTF"
+description: |
+  我在吃 CTF，喔不對，拉麵，但我忘記我在哪間店吃了．．．，請幫我找出來
+  Hint: 不辣
+  (P.S. FlagFormat: AIS3{google map 上的店家名稱:我點的品項在菜單上的名稱})
+  Author: whale120
+
+flag: "AIS3{樂山溫泉拉麵:櫻花蝦叉燒拉麵}"
+author: whale120
+tags:
+  - misc

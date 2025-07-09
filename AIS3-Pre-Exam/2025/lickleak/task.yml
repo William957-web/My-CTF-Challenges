@@ -1,0 +1,17 @@
+name: "LickLeak"
+description: |
+  Leak my secret flag inside my search engine!
+  
+  Author: Whale120
+
+flag: "AIS3{R3t_2_fL4g_31352a}"
+author: Whale120
+port: 5000
+tags:
+  - web
+canonical_name: ctf_web
+compose: ./chal/docker-compose.yml
+distfiles:
+  - ./chal/docker-compose.yml
+  - ./chal/app.py
+  - ./chal/Dockerfile

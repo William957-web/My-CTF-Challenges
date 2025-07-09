@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  lickleak:
+    build: .
+    ports:
+      - "13371:13371"
+    container_name: ctf_web
+    tty: true

@@ -1,0 +1,13 @@
+name: Steam
+description: |
+  I love steaming randomly online!
+  
+  Author : Whale120
+flag: "AIS3{no_more_junks...plz}"
+author: Whale120
+tags:
+  - easy
+  - crypto
+canonical_name: steam
+distfiles:
+  - ./dist/

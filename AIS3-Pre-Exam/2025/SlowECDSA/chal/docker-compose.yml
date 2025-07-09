@@ -1,0 +1,5 @@
+services:
+  slowecdsa:
+    build: .
+    ports:
+      - '19000:10000'

@@ -1,0 +1,11 @@
+name: "SlowECDSA"
+description: |
+  I found this Slow version of ECDSA in my drawer, can you spot the bug?
+
+  Author: whale120
+
+flag: "AIS3{Aff1n3_nounc3s_c@N_bE_broke_ezily...}"
+author: whale120
+port: 10000
+tags:
+  - crypto
