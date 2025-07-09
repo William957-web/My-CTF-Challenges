@@ -2,9 +2,10 @@
 - Author: Whale120
 
 ## Long Story Before...
-Actually, I have an old one on [https://github.com/William957-web/My-CTF-Challenges-Old/](https://github.com/William957-web/My-CTF-Challenges-Old/), which includes some of my challenges before 2025, but because I didn't well organize them at that time, so I opened this new one and try to arrange my challenges better with folders and change my language from Mandarin into English, since now I started to be challenge makers in some international CTFs more often!   
-Speaking short, my challenges (2025~) must included challenge source, but not every 2024 (though probably with writeups)   
- 
+Actually, I have an old one on [https://github.com/William957-web/My-CTF-Challenges-Old/](https://github.com/William957-web/My-CTF-Challenges-Old/), which includes some of my challenges created before 2025. However, I didn’t organize them well at the time, so I created this new repository to better structure my challenges using folders and to switch the language from Mandarin to English—especially since I’ve started contributing to more international CTFs recently.  
+  
+In short, all challenges from 2025 onward will include their source code, but not all challenges from 2024 do (though many of them may still have writeups).
+   
 # CTFs
 Each Challeges will be rated its difficulty from 1~10, basically I want to rate them under the same standards...kinda hard XD. so the difficulty rate would just be suitable standard in a CTF  
 
