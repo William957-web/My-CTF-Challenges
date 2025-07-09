@@ -39,7 +39,7 @@ Full Writeups for all my challenges (English):
 |Category|Challenge Name|Tags|Difficulty|
 |---|---|---|---|
 |Misc|Ramen CTF|OSINT,QRCODE|1|
-|Web|LickLeak|XSLeak|6|
+|Web|LickLeak|XSLeak|7|
 |Crypto|Broken Cast|CRT with Errors,LLL|7|
 |Crypto|SlowECDSA|ECDSA|6|
 |Crypto|Stream|MT19937|3|
