@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  chal:
+    build: .
+    ports:
+      - "21338:5000"
+    container_name: guess_not_xss
+    tty: true

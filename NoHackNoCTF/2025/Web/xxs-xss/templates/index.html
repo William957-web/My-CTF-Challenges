@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XXS XSS</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #0d001f, #000);
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      opacity: 0.2;
+      z-index: 1;
+    }
+
+    .neon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 4rem;
+      color: #fff;
+      text-shadow:
+        0 0 5px #f0f, 
+        0 0 10px #f0f,
+        0 0 20px #0ff,
+        0 0 30px #0ff,
+        0 0 40px #0ff,
+        0 0 50px #0ff,
+        0 0 60px #0ff;
+      z-index: 2;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+      30%, 60% { text-shadow: none; }
+    }
+
+    .hint {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #888;
+      font-size: 0.9rem;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="neon" id="displayName">───</div>
+  <div class="hint">Jumping to the universe ...</div>
+
+  <script>
+
+    function getQueryParam(key) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(key) || '';
+    }
+
+    const name = getQueryParam('name');
+    const targetUrl = getQueryParam('url');
+
+    const display = document.getElementById('displayName');
+    display.textContent = name || 'Guest';
+
+    setTimeout(() => {
+      if (targetUrl && targetUrl.length<=15) {
+        window.location.href = targetUrl;
+      }
+    }, 3000);
+  </script>
+
+</body>
+</html>

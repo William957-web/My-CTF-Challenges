@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  chal:
+    build: .
+    ports:
+      - "21337:5000"
+    container_name: xxs_xss
+    tty: true

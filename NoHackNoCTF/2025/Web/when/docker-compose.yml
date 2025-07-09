@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  vuln-tell-me-web:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - "1338:80"
+    links:
+      - vuln-tell-me-php
+    restart: always
+
+  vuln-tell-me-php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    restart: always

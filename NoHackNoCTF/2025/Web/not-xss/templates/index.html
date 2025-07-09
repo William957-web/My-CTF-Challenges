@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GueSS NOT XSS</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.6/purify.min.js" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 1rem; }
+    input, button { font-size: 1rem; padding: 0.5rem; margin: 0.5rem 0; width: 100%; }
+    #status-container { border: 1px solid #ccc; padding: 1rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>GueSS NOT XSS</h1>
+  <div id="status-container"></div>
+
+  <!-- 改动：form 加上 action 和 method -->
+  <form id="guess-form" action="/guess" method="post" enctype="application/x-www-form-urlencoded">
+    <label>
+      Next guess:<br>
+      <input type="text" name="guess" id="guess" required placeholder="Enter your guess">
+    </label><br>
+    <label>
+      Your note:<br>
+      <input type="text" name="note" id="note-input" placeholder="Optional note">
+    </label><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    async function loadStatus() {
+      function hexDecode(hex) {
+        hex = hex.replace(/^0x/, '');
+        if (hex.length % 2 !== 0) throw new Error('Invalid hex string');
+        let out = '';
+        for (let i = 0; i < hex.length; i += 2) {
+          out += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        }
+        return out;
+      }
+
+      const res = await fetch('/inner.html', { credentials: 'include' });
+      let html = await res.text();
+      html = DOMPurify.sanitize(html);
+      document.getElementById('status-container').innerHTML = html;
+
+      const cookie = document.cookie.split('; ').find(row => row.startsWith('best='));
+      if (cookie) {
+        const val = decodeURIComponent(cookie.split('=')[1]);
+        const [prefixHex, noteHex] = val.split(':');
+        const best = hexDecode(prefixHex) || '(none)';
+        const note = DOMPurify.sanitize(hexDecode(noteHex)) || '(none)';
+        document.getElementById('best-prefix').textContent = best;
+        document.getElementById('note').innerHTML = note;
+      }
+    }
+
+    document.getElementById('guess-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      await fetch(form.action, {
+        method: form.method,
+        credentials: 'include',
+        body: formData
+      });
+
+      await loadStatus();
+      form.reset();
+    });
+
+    window.addEventListener('DOMContentLoaded', loadStatus);
+  </script>
+</body>
+</html>
