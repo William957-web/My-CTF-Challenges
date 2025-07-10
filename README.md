@@ -19,7 +19,7 @@ Full Writeups for all my challenges (English):
 |Crypto|🐺 Verifier +|MT19937,Franklin-Reiter Attacks|6|
 |Crypto|🐺 Verifier Max|MT19937,Franklin-Reiter Attacks,AGCD,LLL|7|
 |Reverse|Yep another smake game|WASM,GAME HACKING,GoDot|3|
-|Reverse|IECD-SHELL|Malware,NodeJS|4|
+|Reverse|IECD-SHELL|Malware,NodeJS,pkg|4|
 |Pwn|Server Status|PATH Abuse|2|
 |Pwn|Server Status Revenge|Shared Memory|4|
 
