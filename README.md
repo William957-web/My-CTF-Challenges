@@ -2,7 +2,7 @@
 - Author: Whale120
 
 # CTFs
-Each Challeges will be rated its difficulty from 1~10, basically I want to rate them under the same standards...kinda hard XD. so the difficulty rate would just be suitable standard in a CTF  
+Each Challeges will be rated its difficulty from 1~10, basically I want to rate them under the same standards...kinda hard XD. so the difficulty rate would just be a suitable standard in one CTF  
 
 ## No Hack No CTF
 ### 2025
