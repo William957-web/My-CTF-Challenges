@@ -39,6 +39,19 @@ Full Writeups for all my challenges (English):
 |Crypto|SlowECDSA|ECDSA|6|
 |Crypto|Stream|MT19937|3|
 
+## QnQSec CTF
+### 2025
+Full Writeups for all my challenges (English):  
+[https://blog.whale-tw.com/2025/10/19/qnqsec-ctf-2025/](https://blog.whale-tw.com/2025/10/19/qnqsec-ctf-2025/)  
+
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Web|Date Logger|Side Channel,PHP|6|
+|Web|FaaS|Argument Injection|5|
+|Crypto|Republic of Geese|DLP,LLL|7|
+|Crypto|🐿️📞|ECC,Oracle,DLP|6|
+|Pwn|Cat's Lottery|Double Free,Race Condition|6|
+
 ## THJCC CTF
 ### 2025
 Official wp (Mandarin): [https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/](https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/)  
