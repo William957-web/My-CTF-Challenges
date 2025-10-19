@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  chal:
+    build: .
+    ports:
+      - "1337:1337"
+    container_name: writer
+    tty: true

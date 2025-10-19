@@ -1,0 +1,5 @@
+services:
+  chal:
+    build: .
+    ports:
+      - '48763:10000'

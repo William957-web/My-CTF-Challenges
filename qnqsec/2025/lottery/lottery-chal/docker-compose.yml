@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  lottery:
+    build: .
+    container_name: lottery_station
+    hostname: lottery
+    ports:
+      - "48765:1337"
+    restart: unless-stopped
