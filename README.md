@@ -4,6 +4,13 @@
 # CTFs
 Each Challeges will be rated its difficulty from 1~10, basically I want to rate them under the same standards...kinda hard XD. so the difficulty rate would just be a suitable standard in one CTF  
 
+## HITCON Exhibition CTF 2025
+### 2025
+It was Belluminnar style CTF this year, and this was my challenge for my team.  
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Misc/Web+Crypto|Daemon Slayer|Python,SQLite,Linear|6|
+
 ## No Hack No CTF
 ### 2025
 Full Writeups for all my challenges (English):  
