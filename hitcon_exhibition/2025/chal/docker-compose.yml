@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  daemonslayer:
+    build: .
+    ports:
+      - "1202:1202"
+    container_name: vrf_card_machine
+    tty: true

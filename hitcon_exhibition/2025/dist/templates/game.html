@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daemon Slayer - Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #5c6ac4;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info span {
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .user-info a {
+            color: #5c6ac4;
+            text-decoration: none;
+        }
+        .user-info a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+        .game-controls {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #draw-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #draw-button:hover {
+            background-color: #4cae4c;
+        }
+        #message-area {
+            margin-top: 20px;
+            min-height: 24px;
+        }
+        #card-container {
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            text-align: center;
+            display: none;
+        }
+        .card-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #5c6ac4;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .card-id {
+            font-size: 14px;
+            color: #999;
+        }
+        .user-keys {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+        }
+        .user-keys h3 {
+            margin-top: 0;
+            color: #4a4a4a;
+        }
+        .user-keys pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Daemon Slayer</h1>
+        <div class="user-info">
+            <span>Hello, {{ username }}</span>
+            <span id="balance">Balance: Loading...</span>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="game-area">
+            <h2>Card Draw</h2>
+            <div class="game-controls">
+                <button id="draw-button">Draw a Card (50 points)</button>
+                <div id="message-area"></div>
+            </div>
+            
+            <div id="card-container">
+                <div id="card" class="card">
+                    <div class="card-title"></div>
+                    <div class="card-desc"></div>
+                    <div class="card-id"></div>
+                    <div id="flag-message" style="color: #d9534f; font-weight: bold; margin-top: 10px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="user-keys">
+            <h3>Your Keys</h3>
+            <strong>pub_mask:</strong>
+            <pre>{{ pub_mask }}</pre>
+            <strong>pub_vector:</strong>
+            <pre>{{ pub_vector }}</pre>
+            <strong>generator_proof:</strong>
+            <pre>{{ generator_proof }}</pre>
+        </div>
+    </div>
+
+    <script>
+        const drawButton = document.getElementById('draw-button');
+        const messageArea = document.getElementById('message-area');
+        const cardElement = document.getElementById('card');
+        const cardTitle = cardElement.querySelector('.card-title');
+        const cardDesc = cardElement.querySelector('.card-desc');
+        const cardId = cardElement.querySelector('.card-id');
+        const flagMessage = document.getElementById('flag-message');
+        const balanceSpan = document.getElementById('balance');
+
+        function updateBalance() {
+            fetch('/get_balance')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.balance !== undefined) {
+                        balanceSpan.textContent = `Balance: ${data.balance}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching balance:', error);
+                    balanceSpan.textContent = `Balance: Error`;
+                });
+        }
+        
+        updateBalance();
+
+        drawButton.addEventListener('click', () => {
+            messageArea.textContent = 'Drawing...';
+            drawButton.disabled = true;
+            cardElement.style.display = 'none';
+            flagMessage.textContent = '';
+
+            // Generate 9 random 128-bit hex integers
+            const numbers = Array.from({ length: 9 }, () => {
+                let hexString = '';
+                for (let i = 0; i < 16; i++) {
+                    hexString += Math.floor(Math.random() * 256).toString(16).padStart(2, '0');
+                }
+                return '0x' + hexString;
+            });
+            
+            fetch('/draw', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ numbers: numbers })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    messageArea.textContent = `Error: ${data.error}`;
+                    updateBalance();
+                } else {
+                    messageArea.textContent = 'Draw successful!';
+                    cardTitle.textContent = data.name;
+                    cardDesc.textContent = data.description;
+                    cardId.textContent = `Card ID: ${data.id}`;
+                    cardElement.style.display = 'block';
+                    cardElement.style.transform = 'scale(1.05)';
+                    setTimeout(() => cardElement.style.transform = 'scale(1)', 300);
+                    if (data.flag) {
+                        flagMessage.textContent = data.flag;
+                    }
+                    updateBalance();
+                }
+            })
+            .catch(error => {
+                messageArea.textContent = 'An unexpected error occurred.';
+                console.error('Fetch error:', error);
+                updateBalance();
+            })
+            .finally(() => {
+                drawButton.disabled = false;
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            Swal.fire({
+                title: 'Welcome, Slayer!',
+                html: `
+                    <p>1. We have implemented a verifiable VRF mechanism, and it's not based on DLP, because we fear our dreaded enemy – quantum computers.</p>
+                    <p>2. There's a h1dd3n fl4g if u're lucky enough to win it.</p>
+                    <p>3. GL;HF, Slayer!</p>
+                `,
+                icon: 'info',
+                confirmButtonText: 'Got it!'
+            });
+        });
+    </script>
+</body>
+</html>

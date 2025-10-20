@@ -1,0 +1,4 @@
+Welcome to our Daemon Salyer card machine!  
+Because I played a simular card machine with my friend and we didn't get what we want =w=  
+So I decided to make one, hide a special flag inside it!  
+Also, the random generation is based on your input and you're kinda 2 check whether the output is right.
