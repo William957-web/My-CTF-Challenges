@@ -35,17 +35,6 @@ Full Writeups for all my challenges (English):
 [https://blog.whale-tw.com/2024/11/17/nhnc-2024-wp/](https://blog.whale-tw.com/2024/11/17/nhnc-2024-wp/) 
 
 
-## AIS3 Pre Exam
-### 2025
-
-|Category|Challenge Name|Tags|Difficulty|
-|---|---|---|---|
-|Misc|Ramen CTF|OSINT,QRCODE|1|
-|Web|LickLeak|XSLeak|7|
-|Crypto|Broken Cast|CRT with Errors,LLL|7|
-|Crypto|SlowECDSA|ECDSA|6|
-|Crypto|Stream|MT19937|3|
-
 ## QnQSec CTF
 ### 2025
 Full Writeups for all my challenges (English):  
@@ -58,6 +47,17 @@ Full Writeups for all my challenges (English):
 |Crypto|Republic of Geese|DLP,LLL|7|
 |Crypto|🐿️📞|ECC,Oracle,DLP|6|
 |Pwn|Cat's Lottery|Double Free,Race Condition|6|
+
+## AIS3 Pre Exam
+### 2025
+
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Misc|Ramen CTF|OSINT,QRCODE|1|
+|Web|LickLeak|XSLeak|7|
+|Crypto|Broken Cast|CRT with Errors,LLL|7|
+|Crypto|SlowECDSA|ECDSA|6|
+|Crypto|Stream|MT19937|3|
 
 ## THJCC CTF
 ### 2025
