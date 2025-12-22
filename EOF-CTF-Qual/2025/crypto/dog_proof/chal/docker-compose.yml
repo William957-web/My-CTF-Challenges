@@ -1,5 +1,0 @@
-services:
-  chal:
-    build: .
-    ports:
-      - '19081:10000'
