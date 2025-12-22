@@ -41,7 +41,7 @@ def obtain_signature(msg):
     res = r.recvline()
     cur_s = int(res.replace(b'wwWooOf: ', b'').decode(), 16)
     return cur_r, cur_s
-    
+
 
 state=[]
 
@@ -50,12 +50,12 @@ for i in range((32*624)//128):
     while cur_id:
         state.append(untemper(cur_id & 0xffffffff))
         cur_id >>= 32
- 
+
 state.append(624)
 random.setstate([3, tuple(state), None])
 
 # print(random.getrandbits(128))
-# r.interactive()    
+# r.interactive()
 
 r_1, s_1 = obtain_signature(b'whale120')
 k_1 = random.getrandbits(255)
