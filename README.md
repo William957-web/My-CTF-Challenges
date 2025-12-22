@@ -49,7 +49,7 @@ Full Writeups for all my challenges (English):
 |Pwn|Cat's Lottery|Double Free,Race Condition|6|
 
 ## EOF CTF Qual  
-### 2025
+### 2026
 |Category|Challenge Name|Tags|Difficulty|
 |---|---|---|---|
 |Web|Linkoreco|Cache Deception,SSRF,LFI|6|
