@@ -6,23 +6,17 @@ import os
 from hashlib import sha256
 import HashTools
 from Crypto.Util.number import *
+from sage.all import *
+from gf2bv import LinearSystem
+from gf2bv.crypto.mt import MT19937
 
-r = remote("127.0.0.1", 19081)
+
+r = remote("10.113.5.211", 19081)
 curve = registry.get_curve('secp256r1')
 p = 115792089210356248762697446949407573530086143415290314195533631308867097853951
 n = 115792089210356248762697446949407573529996955224135760342422259061068512044369
 G = curve.g
 
-def untemper(rand):
-    rand ^= rand >> 18
-    rand ^= (rand << 15) & 0xefc60000
-    a = rand ^ ((rand << 7) & 0x9d2c5680)
-    b = rand ^ ((a << 7) & 0x9d2c5680)
-    c = rand ^ ((b << 7) & 0x9d2c5680)
-    d = rand ^ ((c << 7) & 0x9d2c5680)
-    rand = rand ^ ((d << 7) & 0x9d2c5680)
-    rand ^= ((rand ^ (rand >> 11)) >> 11)
-    return rand
 
 def obtain_id():
     # WooFf wOOF 324872494320987371404017360311352510115'f 🐕!
@@ -42,34 +36,41 @@ def obtain_signature(msg):
     cur_s = int(res.replace(b'wwWooOf: ', b'').decode(), 16)
     return cur_r, cur_s
 
+lin = LinearSystem([int(32)] * 624)
+mt = lin.gens()
+rng = MT19937(mt)
+zeros = []
 
-state=[]
+from tqdm import trange
 
-for i in range((32*624)//128):
-    cur_id = obtain_id()
-    while cur_id:
-        state.append(untemper(cur_id & 0xffffffff))
-        cur_id >>= 32
+for i in trange(200):
+    zeros.append(rng.getrandbits(134) ^ rng.getrandbits(134) ^ int(obtain_id()))
 
-state.append(624)
-random.setstate([3, tuple(state), None])
+zeros.append(mt[0] ^ int(0x80000000))
+info("Solving states")
+sol = lin.solve_one(zeros)
+rng = MT19937(sol)
+pyrand = rng.to_python_random()
 
-# print(random.getrandbits(128))
-# r.interactive()
+for i in range(200):
+    pyrand.getrandbits(134) ^ pyrand.getrandbits(134)
+
+# print(pyrand.getrandbits(134) ^^ pyrand.getrandbits(134))
+# r.interactive()    
 
 r_1, s_1 = obtain_signature(b'whale120')
-k_1 = random.getrandbits(255)
+k_1 = pyrand.getrandbits(255)
 r_2, s_2 = obtain_signature(b'whale120')
-k_2 = random.getrandbits(255)
+k_2 = pyrand.getrandbits(255)
 
 secret = (((s_1*k_1%n) - (s_2*k_2%n)) * pow(r_1 - r_2, -1, n)) % n
-Q = secret * G
+Q = int(secret) * G
 
 origin_hash = long_to_bytes((s_1 * k_1 - r_1 * secret)% n)
 
 h = HashTools.new(algorithm="sha256")
 new_data, new_hash = h.extension(
-    secret_length=64,
+    secret_length=int(64),
     original_data=b"whale120",
     append_data=b"i_am_the_king_of_the_dog",
     signature=origin_hash.hex()
@@ -79,8 +80,9 @@ print(new_data, new_hash)
 
 
 def sign_msg(hashed_data_hex):
+    global pyrand
     z = int(hashed_data_hex, 16) % n
-    k = getrandbits(255)
+    k = pyrand.getrandbits(255)
     R = k * G
     cur_r = R.x
     cur_s = (z + cur_r * secret) * pow(k, -1, n) % n
@@ -92,5 +94,5 @@ r.sendline(b'wowoOf')
 r.sendline(hex(new_r).encode())
 r.sendline(hex(new_s).encode())
 r.sendline(new_data.hex().encode())
-print(r.recvall().decode())
+# print(r.recv().decode())
 r.interactive()
