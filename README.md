@@ -4,7 +4,7 @@
 # CTFs
 Each Challeges will be rated its difficulty from 1~10, basically I want to rate them under the same standards...kinda hard XD. so the difficulty rate would just be a suitable standard in one CTF  
 
-## HITCON Exhibition CTF 2025
+## HITCON Exhibition CTF
 ### 2025
 It was Belluminnar style CTF this year, and this was my challenge for my team.  
 |Category|Challenge Name|Tags|Difficulty|
@@ -47,6 +47,14 @@ Full Writeups for all my challenges (English):
 |Crypto|Republic of Geese|DLP,LLL|7|
 |Crypto|🐿️📞|ECC,Oracle,DLP|6|
 |Pwn|Cat's Lottery|Double Free,Race Condition|6|
+
+## EOF CTF Qual  
+### 2025
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Web|Linkoreco|Cache Deception,SSRF,LFI|6|
+|Crypto|dogdog's Proof|MT19937,Hash LEA,ECDSA|6|
+|Crypto|catcat's message|Pairing|7|
 
 ## AIS3 Pre Exam
 ### 2025
