@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  php-pwn:
+    build: .
+    container_name: whale-php-pwn
+    ports:
+      - "8080:8080"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    stdin_open: true
+    tty: true
+    restart: always
