@@ -1,0 +1,1 @@
+flag = b'THJCC{yep_i_need_a_loooooooo0o000o0o0o0o0000ooo000o0o0o0o0o0oooo00000ng_flag_for_paddddddddddd1nG_no_problem_hh}'
