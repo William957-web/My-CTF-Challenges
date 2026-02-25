@@ -67,6 +67,7 @@ Full Writeups for all my challenges (English):
 |Crypto|SlowECDSA|ECDSA|6|
 |Crypto|Stream|MT19937|3|
 
+
 ## THJCC CTF
 ### 2025
 Official wp (Mandarin): [https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/](https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/)  
@@ -74,6 +75,18 @@ Official wp (Mandarin): [https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/](htt
 |---|---|---|---|
 |Crypto|lIne|Complex Number,LLL|6|
 |Crypto|F&S Farm|Jacobi Curve,Smarts Attack|6|
+
+### 2026
+Official wp (Mandarin): [https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/](https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/)    
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Crypto|676767|Python|2|
+|Crypto|Proof 100|MD5,RSA|4|
+|Crypto|0 login|JWT,Cheng's 4p-1 Backdoor,RSA|6|
+|Crypto|Bit by Bit|CRT with Errors,LLL|7|
+|Crypto|I Sogo 你了喔！|Isogenies,SIDH,MitM|8|
+|Reverse|Baby Malware|DLL Sideload,Malware|5|
+|Pwn|Baby PHP|PHP,ROP|5|
 
 ### 2024
 Easy ones:  
