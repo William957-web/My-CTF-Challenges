@@ -53,7 +53,7 @@ Official wp (Mandarin): [https://hackmd.io/53Ouyr0NSMemWIl3DggMFw](https://hackm
 |---|---|---|---|
 |Crypto|BitEncoder|Side Channel|2|
 |Crypto|MDLP|DLP,Field Extension|6|
-|Crypto|Singular Curve,LLL|7|
+|Crypto|LCurveG|Singular Curve,LLL|7|
 
 ## No Hack No CTF
 ### 2025
