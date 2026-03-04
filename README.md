@@ -11,6 +11,50 @@ It was Belluminnar style CTF this year, and this was my challenge for my team.
 |---|---|---|---|
 |Misc/Web+Crypto|Daemon Slayer|Python,SQLite,Linear|6|
 
+## THJCC CTF
+### 2026
+Official wp (Mandarin): [https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/](https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/)    
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Crypto|676767|Python|2|
+|Crypto|Proof 100|MD5,RSA|4|
+|Crypto|0 login|JWT,Cheng's 4p-1 Backdoor,RSA|6|
+|Crypto|Bit by Bit|CRT with Errors,LLL|7|
+|Crypto|I Sogo 你了喔！|Isogenies,SIDH,MitM|8|
+|Reverse|Baby Malware|DLL Sideload,Malware|5|
+|Pwn|Baby PHP|PHP,ROP|5|
+
+### 2025
+Official wp (Mandarin): [https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/](https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/)  
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Crypto|lIne|Complex Number,LLL|6|
+|Crypto|F&S Farm|Jacobi Curve,Smarts Attack|6|
+
+### 2024
+Easy ones:  
+Official wp (Mandarin): [https://hackmd.io/53Ouyr0NSMemWIl3DggMFw](https://hackmd.io/53Ouyr0NSMemWIl3DggMFw)  
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Web|Blog|Baby|1|
+|Web|Empty|F12|2|
+|Web|Simplify|IDOR,SSTI|3|
+|Crypto|Baby RSA|RSA,Small e Attack|2|
+|Crypto|iRSA|Complex Number,RSA|3|
+|Reverse|Baby C|Static Analysis|2|
+|Pwn|NPSC|PPC,Remote|3|
+|Crypto|Baby AES|AES,Padding Oracle,Custom Cipher Mode|5|
+|Crypto|PELL|Pell Equation,DLP,Pohlig-Hellman|6|
+
+
+## TSCCTF
+### 2026
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Crypto|BitEncoder|Side Channel|2|
+|Crypto|MDLP|DLP,Field Extension|6|
+|Crypto|Singular Curve,LLL|7|
+
 ## No Hack No CTF
 ### 2025
 Full Writeups for all my challenges (English):  
@@ -66,44 +110,6 @@ Full Writeups for all my challenges (English):
 |Crypto|Broken Cast|CRT with Errors,LLL|7|
 |Crypto|SlowECDSA|ECDSA|6|
 |Crypto|Stream|MT19937|3|
-
-
-## THJCC CTF
-
-
-### 2026
-Official wp (Mandarin): [https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/](https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/)    
-|Category|Challenge Name|Tags|Difficulty|
-|---|---|---|---|
-|Crypto|676767|Python|2|
-|Crypto|Proof 100|MD5,RSA|4|
-|Crypto|0 login|JWT,Cheng's 4p-1 Backdoor,RSA|6|
-|Crypto|Bit by Bit|CRT with Errors,LLL|7|
-|Crypto|I Sogo 你了喔！|Isogenies,SIDH,MitM|8|
-|Reverse|Baby Malware|DLL Sideload,Malware|5|
-|Pwn|Baby PHP|PHP,ROP|5|
-
-### 2025
-Official wp (Mandarin): [https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/](https://blog.whale-tw.com/2025/04/24/thjcc-2025-1/)  
-|Category|Challenge Name|Tags|Difficulty|
-|---|---|---|---|
-|Crypto|lIne|Complex Number,LLL|6|
-|Crypto|F&S Farm|Jacobi Curve,Smarts Attack|6|
-
-### 2024
-Easy ones:  
-Official wp (Mandarin): [https://hackmd.io/53Ouyr0NSMemWIl3DggMFw](https://hackmd.io/53Ouyr0NSMemWIl3DggMFw)  
-|Category|Challenge Name|Tags|Difficulty|
-|---|---|---|---|
-|Web|Blog|Baby|1|
-|Web|Empty|F12|2|
-|Web|Simplify|IDOR,SSTI|3|
-|Crypto|Baby RSA|RSA,Small e Attack|2|
-|Crypto|iRSA|Complex Number,RSA|3|
-|Reverse|Baby C|Static Analysis|2|
-|Pwn|NPSC|PPC,Remote|3|
-|Crypto|Baby AES|AES,Padding Oracle,Custom Cipher Mode|5|
-|Crypto|PELL|Pell Equation,DLP,Pohlig-Hellman|6|
 
 ## NCKUCTF
 ### 2024
