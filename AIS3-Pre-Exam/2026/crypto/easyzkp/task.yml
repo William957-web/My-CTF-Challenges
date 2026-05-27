@@ -1,0 +1,14 @@
+---
+name: "EasyZKP"
+description: |
+  You are neither proover or verifier this time.  
+  > Author: whale120  
+flag: "AIS3{simple_oracle_and_dramatic_injections_leading_forge_XDDD}"
+author: whale120
+port: 48765
+tags:
+  - crypto
+  - medium
+compose: ./chal/docker-compose.yml
+distfiles:
+  - ./dist/

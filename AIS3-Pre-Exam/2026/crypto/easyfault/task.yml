@@ -1,0 +1,13 @@
+---
+name: "EasyFAULT"
+description: |
+  FAILURE~  
+  https://www.youtube.com/shorts/Uu5jG_79F8I  
+  > Author: whale120  
+flag: "AIS3{lll_then_lll_then_lll_then_lll_owob}"
+author: whale120
+tags:
+  - crypto
+  - hard
+distfiles:
+  - ./dist/

@@ -1,0 +1,15 @@
+name: easyjwt
+instance_prefix: easyjwt
+lifetime_seconds: 900
+
+build:
+  context: /app/instance
+  dockerfile: Dockerfile
+  image: cinstancer-easyjwt:latest
+
+target_port: 5000
+
+pow: false
+
+env:
+  FLAG: "AIS3{brute_it_brute_it_brute_it_oh}"

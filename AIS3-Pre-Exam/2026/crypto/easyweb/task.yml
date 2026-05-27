@@ -1,0 +1,13 @@
+---
+name: "EasyWEB"
+description: |
+  Pen Test!  
+  On https://ais3-2026-easy-session.whale-tw.com/  
+  > Author: whale120   
+  > P.S. Flag 在網站原始碼裡面  
+flag: "AIS3{copy_and_paste_the_flag}"
+author: whale120
+tags:
+  - crypto
+  - web
+  - easy

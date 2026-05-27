@@ -1,0 +1,12 @@
+---
+name: "EasyRSA"
+description: |
+  I think this challenge "EasyRSA" had collided its name with other 100 CTF challenges lol  
+  > Author: whale120  
+flag: "AIS3{easy_rsa_easy_algebra_easy_aislop_easy_easy_easy_on_its_way_qaq}"
+author: whale120
+tags:
+  - crypto
+  - hard
+distfiles:
+  - ./dist/

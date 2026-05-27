@@ -1,0 +1,10 @@
+services:
+  easyjwt:
+    build: .
+    container_name: easyjwt
+    ports:
+      - "48764:5000"
+    environment:
+      FLAG: "AIS3{brute_it_brute_it_brute_it_oh}"
+    shm_size: "512mb"
+    restart: unless-stopped

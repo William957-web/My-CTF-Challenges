@@ -1,0 +1,35 @@
+services:
+  instancer:
+    image: ghcr.io/curious-000-curious/cinstancer:latest
+    restart: unless-stopped
+    stop_grace_period: 60s
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      net.ipv4.ip_forward: "1"
+    ports:
+      - "48762:8080"
+      - "48764:48764"
+    environment:
+      HTTP_ADDR: ":8080"
+      DB_PATH: /data/cinstancer.db
+      LOGS_DIR: /data/logs
+      INSTANCE_FILE: /app/instance.yml
+      INSTANCE_PORT: "48764"
+      INSTANCE_HOST: "chals1.ais3.org"
+      INSTANCE_CONNECT_MODE: "http"
+      SHUTDOWN_TIMEOUT_SECONDS: "55"
+      DOCKER_NETWORK: "cinstancer-easyjwt"
+      ALLOWED_CIDRS: "10.26.0.0/16"
+      ADMIN_TOKEN: "CuriousAdminPassword"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+      - ./instance.yml:/app/instance.yml:ro
+      - ./instance:/app/instance:ro
+    networks:
+      - cinstancer_easyjwt
+
+networks:
+  cinstancer_easyjwt:
+    name: cinstancer-easyjwt

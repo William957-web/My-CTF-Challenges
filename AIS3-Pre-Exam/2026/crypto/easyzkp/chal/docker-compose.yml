@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: proof/Dockerfile
+    volumes:
+      - ./flag.txt:/flag.txt:ro
+
+  verifier:
+    build:
+      context: .
+      dockerfile: verifier/Dockerfile
+    depends_on:
+      - web
+    ports:
+      - "48765:10000"
+    volumes:
+      - ./flag.txt:/flag.txt:ro

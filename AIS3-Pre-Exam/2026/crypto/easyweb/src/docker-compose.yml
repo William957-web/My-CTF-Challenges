@@ -1,0 +1,8 @@
+services:
+  easysession:
+    build: .
+    image: easysession:local
+    container_name: easysession
+    restart: unless-stopped
+    ports:
+      - "48763:48763"

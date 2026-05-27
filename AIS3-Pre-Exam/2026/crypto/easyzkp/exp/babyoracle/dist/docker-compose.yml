@@ -1,0 +1,5 @@
+services:
+  babyoracle:
+    build: .
+    ports:
+      - '48763:10000'

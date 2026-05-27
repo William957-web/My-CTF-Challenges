@@ -1,0 +1,15 @@
+---
+name: "EasyJWT"
+description: |
+  EasyJWT means BabyWEB and BabyCRYPTO  
+  `python3 solve_pow.py <challenge_url> <visit_url>` to solve PoW and make bot to visit `<visit_url>`    
+  > Author: whale120  
+flag: "AIS3{brute_it_brute_it_brute_it_oh}"
+author: whale120
+port: 48764
+tags:
+  - crypto
+  - medium
+compose: ./chal/compose.yml
+distfiles:
+  - ./dist/

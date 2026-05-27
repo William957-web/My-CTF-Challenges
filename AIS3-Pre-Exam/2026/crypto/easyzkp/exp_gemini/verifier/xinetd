@@ -1,0 +1,14 @@
+service chal
+{
+    disable = no
+    type = UNLISTED
+    socket_type = stream
+    protocol = tcp
+    server = /home/chal/run.sh
+    user = chal
+    port = 10000
+    flags = REUSE
+    bind = 0.0.0.0
+    wait = no
+    log_type = FILE /dev/stdout
+}
