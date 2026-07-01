@@ -11,6 +11,30 @@ It was Belluminnar style CTF this year, and this was my challenge for my team.
 |---|---|---|---|
 |Misc/Web+Crypto|Daemon Slayer|Python,SQLite,Linear|6|
 
+
+## No Hack No CTF
+### 2025
+Full Writeups for all my challenges (English):  
+[https://blog.whale-tw.com/2025/07/07/2025-nhnc-official/](https://blog.whale-tw.com/2025/07/07/2025-nhnc-official/)  
+
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Web|When?|BlackBox,Nginx,PHP-FPM|6|
+|Web|XXS XSS|XSS,javascript protocol|4|
+|Web|NOT XSS|XSLeak,Cookie Size,Browser|9|
+|Crypto|bloCkchAin ciphEr’S sERcret|BlockChain,Classic Cipher|2|
+|Crypto|🐺 Verifier|MT19937,BroadCast Attack|5|
+|Crypto|🐺 Verifier +|MT19937,Franklin-Reiter Attacks|6|
+|Crypto|🐺 Verifier Max|MT19937,Franklin-Reiter Attacks,AGCD,LLL|7|
+|Reverse|Yep another smake game|WASM,GAME HACKING,GoDot|3|
+|Reverse|IECD-SHELL|Malware,NodeJS,pkg|4|
+|Pwn|Server Status|PATH Abuse|2|
+|Pwn|Server Status Revenge|Shared Memory|4|
+
+### 2024
+(Partial) Writeups for some "realatively hard" challenges in that year (which is just for those newbies in newbies):   
+[https://blog.whale-tw.com/2024/11/17/nhnc-2024-wp/](https://blog.whale-tw.com/2024/11/17/nhnc-2024-wp/) 
+
 ## THJCC CTF
 ### 2026
 Official wp (Mandarin): [https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/](https://blog.whale-tw.com/2026/02/22/thjcc-2026-official/)    
@@ -55,30 +79,6 @@ Official wp (Mandarin): [https://hackmd.io/53Ouyr0NSMemWIl3DggMFw](https://hackm
 |Crypto|MDLP|DLP,Field Extension|6|
 |Crypto|LCurveG|Singular Curve,LLL|7|
 
-## No Hack No CTF
-### 2025
-Full Writeups for all my challenges (English):  
-[https://blog.whale-tw.com/2025/07/07/2025-nhnc-official/](https://blog.whale-tw.com/2025/07/07/2025-nhnc-official/)  
-
-|Category|Challenge Name|Tags|Difficulty|
-|---|---|---|---|
-|Web|When?|BlackBox,Nginx,PHP-FPM|6|
-|Web|XXS XSS|XSS,javascript protocol|4|
-|Web|NOT XSS|XSLeak,Cookie Size,Browser|9|
-|Crypto|bloCkchAin ciphEr’S sERcret|BlockChain,Classic Cipher|2|
-|Crypto|🐺 Verifier|MT19937,BroadCast Attack|5|
-|Crypto|🐺 Verifier +|MT19937,Franklin-Reiter Attacks|6|
-|Crypto|🐺 Verifier Max|MT19937,Franklin-Reiter Attacks,AGCD,LLL|7|
-|Reverse|Yep another smake game|WASM,GAME HACKING,GoDot|3|
-|Reverse|IECD-SHELL|Malware,NodeJS,pkg|4|
-|Pwn|Server Status|PATH Abuse|2|
-|Pwn|Server Status Revenge|Shared Memory|4|
-
-### 2024
-(Partial) Writeups for some "realatively hard" challenges in that year (which is just for those newbies in newbies):   
-[https://blog.whale-tw.com/2024/11/17/nhnc-2024-wp/](https://blog.whale-tw.com/2024/11/17/nhnc-2024-wp/) 
-
-
 ## QnQSec CTF
 ### 2025
 Full Writeups for all my challenges (English):  
@@ -101,6 +101,17 @@ Full Writeups for all my challenges (English):
 |Crypto|catcat's message|Pairing|7|
 
 ## AIS3 Pre Exam
+### 2026  
+Writeup (in Mandarin): [https://blog.whale-tw.com/2026/05/28/pre-exam-2026-official-crypto/](https://blog.whale-tw.com/2026/05/28/pre-exam-2026-official-crypto/)  
+|Category|Challenge Name|Tags|Difficulty|
+|---|---|---|---|
+|Crypto|EasyWEB|AES-ECB,Copy&Paste Attack,LFI,Blackbox|3|
+|Crypto|EasyJWT|JWT,RSA,NT,Python,MitM|4|
+|Crypto|EasyZKP|n-tic residue,ZKP,LEA|5|
+|Crypto|EasyPAINT|Nuitka,LLL,LWE|6|
+|Crypto|EasyFAULT|HSSP,LLL|8|
+|Crypto|EasyRSA|PolynomialRing,RSA|8|
+
 ### 2025
 
 |Category|Challenge Name|Tags|Difficulty|
