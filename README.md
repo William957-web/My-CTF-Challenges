@@ -15,7 +15,7 @@ It was Belluminnar style CTF this year, and this was my challenge for my team.
 ## No Hack No CTF
 ### 2025
 Full Writeups for all my challenges (English):  
-[https://blog.whale-tw.com/2025/07/07/2025-nhnc-official/](https://blog.whale-tw.com/2025/07/07/2025-nhnc-official/)  
+https://blog.whale-tw.com/2025/08/30/2025-nhnc-official/
 
 |Category|Challenge Name|Tags|Difficulty|
 |---|---|---|---|
